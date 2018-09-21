@@ -111,6 +111,7 @@ function checkExitsUser() {
         socket.emit('CLIENT_DANG_KY_COOKIE', JSON.parse(aValue));
         fullName = userData.fullName;
         socketEmail = userData.email;
+        $('#user-current').text(fullName);
     }
 }
 function scrollChat() {
