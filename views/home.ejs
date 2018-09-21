@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Chat Tool</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+
+    <script src="/js/jquery.min.js"></script>
+    
+    <!-- Optional JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    
+</head>
+
+<body onload="checkExitsUser()">
+    <div class="container" id="chat-area-off">
+        <div style="width:500px; margin:auto">
+            <h3 class=" text-center">Login</h3>
+            <div class="alert alert-danger" id="alert-dangky" style="display:none">
+                <small></small>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+            </div>
+            <form id="register">
+                <div class="form-group">
+                    <input name="fullName" placeholder="Đăng ký tên của bạn" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input name="email" placeholder="Email của bạn" type="email" class="form-control" />
+                </div>
+                <div class="form-group text-center">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-sm btn-warning">Hủy</a>
+                        <button class="btn btn-sm btn-success">Đăng ký</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container" id="chat-area-on" style="display:none" >
+        <div class="alert alert-danger text-center" id="alert-chat" style="display:none">
+            <small></small>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+        <h3 class=" text-center">Messaging</h3>
+        <div class="messaging">
+            <div class="inbox_msg">
+                <div class="inbox_people">
+                    <div class="headind_srch">
+                        <div class="recent_heading">
+                            <h4>Onlines</h4>
+                        </div>
+                    </div>
+                    <div class="inbox_chat" id="list-user">
+
+                    </div>
+                </div>
+                <div class="mesgs">
+                    <div class="msg_history" id="msg_history">
+                        
+                    </div>
+                    <div class="type_msg">
+                        <form id="formEvent">
+                            <div class="input_msg_write">
+                                <input type="text" class="write_msg" id="message" placeholder="Type a message" />
+                                <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
