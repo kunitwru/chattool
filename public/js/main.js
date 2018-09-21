@@ -118,6 +118,11 @@ function scrollChat() {
 }
 
 $(document).ready(function() {
+    //hidden alert
+    setTimeout(function(){
+        $('.alert').hide();
+    }, 2000)
+
     socket.on('SERVER_SEND_ALL_DATA', function(data){
         var aValue = localStorage.getItem("userChat");
         if(aValue) {
