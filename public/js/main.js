@@ -1,4 +1,4 @@
-var socket = io("http://localhost:3001");
+var socket = io("https://murmuring-citadel-34522.herokuapp.com/");
 var fullName = '';
 var socketEmail = '';
 $.fn.serializeObject = function() {
